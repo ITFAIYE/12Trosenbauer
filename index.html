@@ -1,165 +1,394 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ROSENBAUER 12 TON MERCEDES KULLANIM - Sekmeli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="description" content="Ankara İtfaiyesi Rosenbauer 12 Ton Mercedes İtfaiye Aracı Kullanım Kılavuzu" />
+  <title>ROSENBAUER 12 TON MERCEDES KULLANIM KILAVUZU</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --accent: #e63946;
+      --accent-dark: #c1121f;
+      --accent-glow: rgba(230, 57, 70, 0.3);
+      --soft: #fff5f6;
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #6c757d;
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+      --gradient-1: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fefefe;
-      color: #333;
+      padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #fafafa;
-      padding: 20px 15px;
-      border-bottom: 3px solid #b30000;
-      box-shadow: 0 4px 8px rgba(179, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--gradient-1);
+      padding: 16px 24px;
+      box-shadow: var(--shadow-lg);
+      animation: slideDown 0.5s ease;
     }
 
-    .logo-left img, .logo-right img {
-      height: 80px;
-      border-radius: 10px;
-      background: #fff;
-      padding: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-container img {
+      height: 90px;
+      border-radius: 12px;
+      background: white;
+      padding: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.05);
     }
 
     .title-section {
+      flex: 1;
       text-align: center;
-      flex-grow: 1;
     }
 
     .title-section h1 {
-      margin: 0;
-      font-size: 1.6rem;
-      color: #b30000;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 4px;
     }
 
     .title-section h2 {
-      margin: 5px 0 0 0;
-      font-size: 1rem;
-      color: #555;
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: #fff;
-      border-bottom: 2px solid #ddd;
-    }
-
-    .tab-button {
-      padding: 14px 20px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      outline: none;
+      color: rgba(255, 255, 255, 0.9);
       font-size: 1rem;
       font-weight: 500;
-      transition: background 0.3s;
-      color: #b30000;
-      border-bottom: 3px solid transparent;
+      letter-spacing: 0.3px;
     }
 
-    .tab-button:hover,
-    .tab-button.active {
-      background: #f2f2f2;
-      border-color: #b30000;
+    /* Tabs */
+    .tabs {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 102px;
+      z-index: 999;
+      box-shadow: var(--shadow-sm);
     }
 
-    .tab-content {
+    .tabs-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      padding: 0 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) var(--soft);
+    }
+
+    .tabs-inner::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .tabs-inner::-webkit-scrollbar-track {
+      background: var(--soft);
+    }
+
+    .tabs-inner::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .tab-btn {
+      padding: 16px 20px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: all 0.3s;
+      white-space: nowrap;
+      font-family: inherit;
+      flex-shrink: 0;
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+      background: var(--soft);
+    }
+
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      background: var(--soft);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Content */
+    .content {
       display: none;
-      padding: 20px;
-      text-align: center;
     }
 
-    .tab-content.active {
+    .content.active {
       display: block;
+      animation: fadeIn 0.4s ease;
     }
 
-    .tab-content img {
+    .content-card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .content-card img {
       width: 100%;
-      max-width: 950px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    /* İnteraktif görsel container */
-    .pompa-panel-container {
-      max-width: 950px;
-      margin: 0 auto;
-    }
-
-    .pompa-panel-wrapper {
-      position: relative;
-      width: 100%;
-      display: inline-block;
-    }
-
-    .pompa-panel-wrapper img {
-      width: 100%;
+      max-width: 1200px;
       height: auto;
       display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
     }
 
-    .marker {
-      background: #b30000;
-      color: #fff;
-      font-size: 0.9rem;
-      font-weight: bold;
-      width: 30px;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      position: absolute;
-      transform: translate(-50%, -50%);
-      z-index: 10;
+    /* Pompa Panel */
+    .panel-section {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
     }
 
-    /* Çizgi stili - beyaz border ile */
+    .panel-wrapper {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel-wrapper img {
+      width: 100%;
+      max-width: 1100px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Lines */
     .line {
       position: absolute;
-      background: #b30000;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      background: var(--accent);
+      box-shadow: 0 2px 8px rgba(230, 57, 70, 0.3);
+      z-index: 5;
     }
 
-    /* Dikey çizgiler için */
     .line-vertical {
       width: 4px;
     }
 
-    /* Yatay çizgiler için */
     .line-horizontal {
       height: 4px;
     }
 
+    /* Markers */
+    .marker {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      background: var(--gradient-1);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 12px var(--accent-glow);
+      z-index: 10;
+      border: 2px solid white;
+    }
+
     .marker:hover {
-      transform: translate(-50%, -50%) scale(1.1);
-      box-shadow: 0 4px 12px rgba(179, 0, 0, 0.5);
+      transform: translate(-50%, -50%) scale(1.15);
+      box-shadow: 0 6px 20px var(--accent-glow);
     }
 
     .marker.active {
-      background: #fff;
-      color: #b30000;
-      border: 2px solid #b30000;
+      background: white;
+      color: var(--accent);
+      border-color: var(--accent);
       transform: translate(-50%, -50%) scale(1.2);
+      box-shadow: 0 8px 24px var(--accent-glow);
     }
 
-    /* Tooltip stili */
+    /* Info Panel */
+    .info-panel {
+      margin-top: 32px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+
+    .info-panel h3 {
+      text-align: center;
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      position: relative;
+      padding-bottom: 16px;
+    }
+
+    .info-panel h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gradient-1);
+    }
+
+    .info-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .info-item:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .info-item.active {
+      background: var(--soft);
+      border-left: 4px solid var(--accent);
+    }
+
+    .info-num {
+      width: 40px;
+      height: 40px;
+      background: var(--gradient-1);
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    .info-text {
+      flex: 1;
+      line-height: 1.7;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Highlight Animation */
+    @keyframes highlight {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 40px var(--accent-glow);
+      }
+    }
+
+    .highlight {
+      animation: highlight 1s ease;
+    }
+
+    /* Tooltip */
     .tooltip {
       position: absolute;
       background: rgba(0, 0, 0, 0.9);
@@ -194,85 +423,143 @@
       border-bottom: 8px solid rgba(0, 0, 0, 0.9);
     }
 
-    /* Açıklamalar paneli */
-    .info-panel {
-      max-width: 950px;
-      margin: 30px auto 0;
-      background: #f8f8f8;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 25px;
+    /* Footer */
+    footer {
+      background: var(--gradient-1);
+      color: white;
+      padding: 32px 24px;
+      margin-top: 48px;
+      box-shadow: var(--shadow-lg);
     }
 
-    .info-panel h3 {
-      margin: 0 0 20px 0;
-      color: #b30000;
-      font-size: 1.2rem;
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
       text-align: center;
     }
 
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 15px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #e0e0e0;
+    .footer-section h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .info-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+    .footer-section p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
     }
 
-    .info-number {
-      background: #b30000;
-      color: #fff;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      margin-right: 15px;
-      flex-shrink: 0;
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 32px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
     }
 
-    .info-text {
-      flex: 1;
-      text-align: left;
-      line-height: 1.6;
-    }
-
-    /* Responsive düzenlemeler */
-    @media (max-width: 768px) {
-      header {
-        padding: 15px 10px;
+    /* Mobile */
+    @media (max-width: 900px) {
+      .logo-container img {
+        height: 80px;
       }
 
       .title-section h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
 
       .title-section h2 {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 12px 16px;
       }
 
-      .logo-left img, .logo-right img {
-        height: 50px;
+      .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        gap: 12px;
       }
 
-      .tab-button {
-        font-size: 0.85rem;
-        padding: 10px 12px;
+      .logo-container {
+        display: flex;
+      }
+
+      .logo-container img {
+        height: 70px;
+      }
+
+      .title-section h1 {
+        font-size: 1rem;
+      }
+
+      .title-section h2 {
+        font-size: 0.7rem;
+      }
+
+      .tabs {
+        top: 94px;
+      }
+
+      .tabs-inner {
+        padding: 0 16px;
+        overflow-x: visible;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .tab-btn {
+        padding: 12px 14px;
+        font-size: 0.8rem;
+      }
+
+      .container {
+        padding: 24px 16px;
+      }
+
+      .content-card,
+      .panel-section {
+        padding: 20px;
       }
 
       .marker {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        font-size: 0.8rem;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+
+      .info-panel {
+        padding: 24px;
+        margin-top: 24px;
+      }
+
+      .info-panel h3 {
+        font-size: 1.2rem;
+        margin-bottom: 24px;
+      }
+
+      .info-item {
+        padding: 16px;
+      }
+
+      .info-num {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+
+      .info-text {
+        font-size: 0.9rem;
       }
 
       .tooltip {
@@ -281,63 +568,72 @@
         padding: 10px 12px;
       }
 
-      .info-panel {
-        margin: 20px 15px 0;
-        padding: 20px;
+      footer {
+        padding: 24px 16px;
+        margin-top: 32px;
       }
 
-      .info-panel h3 {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-section h3 {
         font-size: 1.1rem;
       }
 
-      .info-item {
-        margin-bottom: 12px;
-        padding-bottom: 12px;
+      .footer-section p {
+        font-size: 0.9rem;
       }
 
-      .info-number {
-        width: 25px;
-        height: 25px;
-        font-size: 0.8rem;
-        margin-right: 10px;
-      }
-
-      .info-text {
+      .footer-bottom {
+        margin-top: 24px;
+        padding-top: 20px;
         font-size: 0.85rem;
       }
     }
 
-    @media (max-width: 480px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .logo-left, .logo-right {
-        display: none;
+    @media (max-width: 520px) {
+      .logo-container img {
+        height: 55px;
       }
 
       .title-section h1 {
-        font-size: 1.1rem;
+        font-size: 0.85rem;
       }
 
-      .tabs {
-        overflow-x: auto;
-        justify-content: flex-start;
-        -webkit-overflow-scrolling: touch;
+      .title-section h2 {
+        font-size: 0.6rem;
       }
 
-      .tab-button {
-        flex-shrink: 0;
-        font-size: 0.8rem;
-        padding: 8px 10px;
+      .tab-btn {
+        padding: 10px 12px;
+        font-size: 0.75rem;
       }
 
       .marker {
-        width: 22px;
-        height: 22px;
-        line-height: 22px;
-        font-size: 0.75rem;
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+      }
+
+      .info-panel {
+        padding: 20px;
+      }
+
+      .info-item {
+        padding: 14px;
+        gap: 12px;
+      }
+
+      .info-num {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+
+      .info-text {
+        font-size: 0.85rem;
       }
 
       .tooltip {
@@ -345,224 +641,266 @@
         max-width: 300px;
         left: 50% !important;
         transform: translateX(-50%);
+        font-size: 0.75rem;
       }
 
       .tooltip::before {
         display: none;
       }
+    }
 
-      .info-panel {
-        margin: 15px 10px 0;
-        padding: 15px;
-      }
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
 
-      .info-panel h3 {
-        font-size: 1rem;
-        margin-bottom: 15px;
-      }
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
 
-      .info-number {
-        width: 22px;
-        height: 22px;
-        font-size: 0.75rem;
-      }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 6px;
+      border: 3px solid var(--bg);
+    }
 
-      .info-text {
-        font-size: 0.8rem;
-      }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-dark);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo-left">
-      <img src="https://s.ankara.bel.tr/files/2022/11/24/6e7ea7997a234e3b8089fd0779c5e1e6.jpeg" alt="ABB" />
-    </div>
-    <div class="title-section">
-      <h1>ANKARA İTFAİYESİ</h1>
-      <h2>ROSENBAUER 12 TON MERCEDES KULLANIM</h2>
-    </div>
-    <div class="logo-right">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Emblem_of_Turkish_Firefighters.svg/640px-Emblem_of_Turkish_Firefighters.svg.png" alt="İTFAİYE" />
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="https://s.ankara.bel.tr/files/2022/11/24/6e7ea7997a234e3b8089fd0779c5e1e6.jpeg" alt="Ankara Belediyesi">
+      </div>
+      <div class="title-section">
+        <h1>ANKARA İTFAİYESİ</h1>
+        <h2>ROSENBAUER 12 TON MERCEDES KULLANIM KILAVUZU</h2>
+      </div>
+      <div class="logo-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Emblem_of_Turkish_Firefighters.svg/640px-Emblem_of_Turkish_Firefighters.svg.png" alt="İtfaiye">
+      </div>
     </div>
   </header>
 
   <nav class="tabs">
-    <button class="tab-button active" data-tab="giris">Giriş</button>
-    <button class="tab-button" data-tab="panel">Araç İçi Panel</button>
-    <button class="tab-button" data-tab="pompa-panel">Pompa Paneli</button>
-    <button class="tab-button" data-tab="su">Su İşleme</button>
-    <button class="tab-button" data-tab="kopuk">Köpük İşleme</button>
-    <button class="tab-button" data-tab="cikrik">NE-Pİ-RO</button>
-
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="giris">Giriş</button>
+      <button class="tab-btn" data-tab="panel">Araç İçi Panel</button>
+      <button class="tab-btn" data-tab="pompa">Pompa Paneli</button>
+      <button class="tab-btn" data-tab="su">Su İşleme</button>
+      <button class="tab-btn" data-tab="kopuk">Köpük İşleme</button>
+      <button class="tab-btn" data-tab="cikrik">NE-Pİ-RO</button>
+    </div>
   </nav>
 
-  <section id="giris" class="tab-content active">
-    <img src="https://i.imgur.com/VOYdngd.png" alt="Giriş">
-  </section>
-
-  <section id="panel" class="tab-content">
-    <img src="https://i.imgur.com/NpFFTST.jpeg" alt="Araç Paneli">
-  </section>
-
-  <section id="pompa-panel" class="tab-content">
-    <div class="pompa-panel-container">
-      <div class="pompa-panel-wrapper" id="pompaPanelWrapper">
-        <img src="https://i.imgur.com/JngXece.jpeg" alt="Pompa Paneli" id="pompaPanelImage">
-        
-        <!-- Markerlar ve çizgiler -->
-        <!-- 1 - Pompayı Çalıştır -->
-        <div class="marker" style="top: 20.5%; left: 55%;" data-info="POMPAYI ÇALIŞTIRIR">1</div>
-        <div class="line line-vertical" style="top: 21.5%; left: calc(55% - 2px); height: 5%;"></div>
-        <div class="tooltip" id="tooltip-1">POMPAYI ÇALIŞTIRIR.</div>
-
-        <!-- 2 - Pompayı Durdur -->
-        <div class="marker" style="top: 20.5%; left: 70%;" data-info="POMPAYI DURDURUR">2</div>
-        <div class="line line-vertical" style="top: 21.5%; left: calc(70% - 2px); height: 5%;"></div>
-        <div class="tooltip" id="tooltip-2">POMPAYI DURDURUR.</div>
-
-        <!-- 3 - Dijital Ekran -->
-        <div class="marker" style="top: 33%; left: 42%;" data-info="DİJİTAL EKRAN">3</div>
-        <div class="line line-horizontal" style="top: calc(33% - 2px); left: 36%; width: 6%;"></div>
-        <div class="tooltip" id="tooltip-3">DİJİTAL EKRAN.</div>
-
-        <!-- 4 - Tesisat Boşaltma -->
-        <div class="marker" style="top: 57%; left: 39%;" data-info="TESİSATTAKİ SUYU BOŞALTIR.">4</div>
-        <div class="line line-horizontal" style="top: calc(57% - 1px); left: 38%; width: 4%;"></div>
-        <div class="tooltip" id="tooltip-4">TESİSATTAKİ SUYU BOŞALTIR.</div>
-
-        <!-- 5 - Monitör Vanası -->
-        <div class="marker" style="top: 56.3%; left: 65%;" data-info="MONİTÖR VANASI.">5</div>
-        <div class="line line-horizontal" style="top: calc(56.3% - 2px); left: 60%; width: 5%;"></div>
-        <div class="tooltip" id="tooltip-5">MONİTÖR VANASI.</div>
-
-        <!-- 6 - Su Tankı Boşaltma -->
-        <div class="marker" style="top: 65.4%; left: 65%;" data-info="SU TANKINDAKİ SUYU BOŞALTIR.">6</div>
-        <div class="line line-horizontal" style="top: calc(65.4% - 2px); left: 61%; width: 3%;"></div>
-        <div class="tooltip" id="tooltip-6">SU TANKINDAKİ SUYU BOŞALTIR.</div>
-
-        <!-- 7 - Aydınlatma -->
-        <div class="marker" style="top: 73%; left: 52%;" data-info="AYDINLATMAYI AÇAR.">7</div>
-        <div class="line line-horizontal" style="top: calc(73% - 2px); left: 52%; width: 3%;"></div>
-        <div class="tooltip" id="tooltip-7">AYDINLATMAYI AÇAR.</div>
-
-        <!-- 8 - Ana Vana -->
-        <div class="marker" style="top: 57%; left: 11%;" data-info="ANA VANA">8</div>
-        <div class="line line-horizontal" style="top: calc(57% - 2px); left: 12%; width: 5%;"></div>
-        <div class="tooltip" id="tooltip-8">ANA VANA.</div>
-
-        <!-- 9 - Emiş Vanası -->
-        <div class="marker" style="top: 65%; left: 11%;" data-info="EMİŞ VANASI">9</div>
-        <div class="line line-horizontal" style="top: calc(65% - 2px); left: 12%; width: 5%;"></div>
-        <div class="tooltip" id="tooltip-9">EMİŞ VANASI.</div>
-
-        <!-- 10 - Basınç Ayarlama -->
-        <div class="marker" style="top: 39%; left: 77%;" data-info="BASINÇ AYARLAMA GAZ (-) - (+)">10</div>
-        <div class="line line-horizontal" style="top: calc(39% - 3px); left: 68%; width: 9%; height: 6px;"></div>
-        <div class="tooltip" id="tooltip-10">BASINÇ AYARLAMA GAZ (-) - (+).</div>
-
-        <!-- 11 - Tank Dolum -->
-        <div class="marker" style="top: 66%; left: 81%;" data-info="Tank Dolum">11</div>
-        <div class="line line-horizontal" style="top: calc(66% - 3px); left: 77%; width: 3%; height: 4px;"></div>
-        <div class="tooltip" id="tooltip-11">Tank Dolum</div>
+  <div class="container">
+    <div id="giris" class="content active">
+      <div class="content-card">
+        <img src="https://i.imgur.com/VOYdngd.png" alt="Giriş">
       </div>
+    </div>
 
-      <!-- Açıklamalar paneli -->
-      <div class="info-panel">
-        <h3>POMPA PANELİ AÇIKLAMALARI</h3>
-        <div class="info-item">
-          <div class="info-number">1</div>
-          <div class="info-text">P.T.O YU DEVREYE SOKARAK SU POMPASININ ÇALIŞMASINI SAĞLAR.</div>
+    <div id="panel" class="content">
+      <div class="content-card">
+        <img src="https://i.imgur.com/NpFFTST.jpeg" alt="Araç Paneli">
+      </div>
+    </div>
+
+    <div id="pompa" class="content">
+      <div class="panel-section">
+        <div class="panel-wrapper">
+          <img src="https://i.imgur.com/JngXece.jpeg" alt="Pompa Paneli">
+          
+          <!-- 1 - Pompayı Çalıştır -->
+          <div class="marker" style="top: 20.5%; left: 55%;" data-num="1">1</div>
+          <div class="line line-vertical" style="top: 21.5%; left: calc(55% - 2px); height: 5%;"></div>
+          <div class="tooltip" id="tooltip-1">POMPAYI ÇALIŞTIRIR.</div>
+
+          <!-- 2 - Pompayı Durdur -->
+          <div class="marker" style="top: 20.5%; left: 70%;" data-num="2">2</div>
+          <div class="line line-vertical" style="top: 21.5%; left: calc(70% - 2px); height: 5%;"></div>
+          <div class="tooltip" id="tooltip-2">POMPAYI DURDURUR.</div>
+
+          <!-- 3 - Dijital Ekran -->
+          <div class="marker" style="top: 33%; left: 42%;" data-num="3">3</div>
+          <div class="line line-horizontal" style="top: calc(33% - 2px); left: 36%; width: 6%;"></div>
+          <div class="tooltip" id="tooltip-3">DİJİTAL EKRAN.</div>
+
+          <!-- 4 - Tesisat Boşaltma -->
+          <div class="marker" style="top: 57%; left: 39%;" data-num="4">4</div>
+          <div class="line line-horizontal" style="top: calc(57% - 1px); left: 38%; width: 4%;"></div>
+          <div class="tooltip" id="tooltip-4">TESİSATTAKİ SUYU BOŞALTIR.</div>
+
+          <!-- 5 - Monitör Vanası -->
+          <div class="marker" style="top: 56.3%; left: 65%;" data-num="5">5</div>
+          <div class="line line-horizontal" style="top: calc(56.3% - 2px); left: 60%; width: 5%;"></div>
+          <div class="tooltip" id="tooltip-5">MONİTÖR VANASI.</div>
+
+          <!-- 6 - Su Tankı Boşaltma -->
+          <div class="marker" style="top: 65.4%; left: 65%;" data-num="6">6</div>
+          <div class="line line-horizontal" style="top: calc(65.4% - 2px); left: 61%; width: 3%;"></div>
+          <div class="tooltip" id="tooltip-6">SU TANKINDAKİ SUYU BOŞALTIR.</div>
+
+          <!-- 7 - Aydınlatma -->
+          <div class="marker" style="top: 73%; left: 52%;" data-num="7">7</div>
+          <div class="line line-horizontal" style="top: calc(73% - 2px); left: 52%; width: 3%;"></div>
+          <div class="tooltip" id="tooltip-7">AYDINLATMAYI AÇAR.</div>
+
+          <!-- 8 - Ana Vana -->
+          <div class="marker" style="top: 57%; left: 11%;" data-num="8">8</div>
+          <div class="line line-horizontal" style="top: calc(57% - 2px); left: 12%; width: 5%;"></div>
+          <div class="tooltip" id="tooltip-8">ANA VANA.</div>
+
+          <!-- 9 - Emiş Vanası -->
+          <div class="marker" style="top: 65%; left: 11%;" data-num="9">9</div>
+          <div class="line line-horizontal" style="top: calc(65% - 2px); left: 12%; width: 5%;"></div>
+          <div class="tooltip" id="tooltip-9">EMİŞ VANASI.</div>
+
+          <!-- 10 - Basınç Ayarlama -->
+          <div class="marker" style="top: 39%; left: 77%;" data-num="10">10</div>
+          <div class="line line-horizontal" style="top: calc(39% - 3px); left: 68%; width: 9%; height: 6px;"></div>
+          <div class="tooltip" id="tooltip-10">BASINÇ AYARLAMA GAZ (-) - (+).</div>
+
+          <!-- 11 - Tank Dolum -->
+          <div class="marker" style="top: 66%; left: 81%;" data-num="11">11</div>
+          <div class="line line-horizontal" style="top: calc(66% - 3px); left: 77%; width: 3%; height: 4px;"></div>
+          <div class="tooltip" id="tooltip-11">TANK DOLUM.</div>
         </div>
-        <div class="info-item">
-          <div class="info-number">2</div>
-          <div class="info-text">P.T.O YU DEVRE DIŞI BIRAKARAK POMPANIN ÇALIŞMASINI DURDURUR.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">3</div>
-          <div class="info-text">DİJİTAL EKRAN: Altındaki oklar sayesinde menüler içerisinde geçiş yapabilirsiniz. Su - köpük seviyesi görme, pompa çıkış basıncı, pompa devri ve pompa çalışma saati gibi bilgileri gösterir.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">4</div>
-          <div class="info-text">KIŞIN POMPANIN DONMA TEHLİKESİNE KARŞI TESİSATTAKİ SUYU BOŞALTIR.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">5</div>
-          <div class="info-text">MONİTÖRDEN SU İŞLEMEK İÇİN AÇILAN MONİTÖR VANASI.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">6</div>
-          <div class="info-text">SU TANKINDAKİ SUYU BOŞALTIR.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">7</div>
-          <div class="info-text">AYDINLATMAYI AÇAR.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">8</div>
-          <div class="info-text">ANA VANA: Start tuşuna bastığınız zaman emiş vanası ve ana vana arasında otomatik seçim yapar. Su işleneceği zaman basılmasına gerek yoktur sistem otomatik açıyor.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">9</div>
-          <div class="info-text">EMİŞ VANASI: Start tuşuna bastığınız zaman emiş vanası ve ana vana arasında otomatik seçim yapar. Emiş haricinde açmanıza gerek yoktur.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">10</div>
-          <div class="info-text">BASINÇ AYARLAMA GAZ (-) - (+) DÜĞMESİ: Pompa devrini ve aynı zamanda suyun basıncını arttırmak için, Düğmeyi sağa çevirirseniz gaz (+) sola çevirirseniz gaz (-) devreye girer.</div>
-        </div>
-        <div class="info-item">
-          <div class="info-number">11</div>
-          <div class="info-text">Emiş esnasında bu düğme açılırsa pompa emdiği suyu tanka doldurur (Açılmazsa emdiği suyu yangına işler), Diğer bir işlevi ise uzun süre pompadan su işlenmediği zaman pompa ısınmaya başlayacaktır. Bu ısınmanın önüne geçmek için bu tuş açıldığı zaman pompa basınçlandırdığı suyu tekrar su tankına doldurarak sürekli olarak bir devridaim yaparak kendisini soğutur.</div>
+
+        <div class="info-panel">
+          <h3>Pompa Paneli Açıklamaları</h3>
+          <div class="info-grid">
+            <div class="info-item" data-num="1">
+              <div class="info-num">1</div>
+              <div class="info-text">P.T.O YU DEVREYE SOKARAK SU POMPASININ ÇALIŞMASINI SAĞLAR.</div>
+            </div>
+            <div class="info-item" data-num="2">
+              <div class="info-num">2</div>
+              <div class="info-text">P.T.O YU DEVRE DIŞI BIRAKARAK POMPANIN ÇALIŞMASINI DURDURUR.</div>
+            </div>
+            <div class="info-item" data-num="3">
+              <div class="info-num">3</div>
+              <div class="info-text">DİJİTAL EKRAN: Altındaki oklar sayesinde menüler içerisinde geçiş yapabilirsiniz. Su - köpük seviyesi görme, pompa çıkış basıncı, pompa devri ve pompa çalışma saati gibi bilgileri gösterir.</div>
+            </div>
+            <div class="info-item" data-num="4">
+              <div class="info-num">4</div>
+              <div class="info-text">KIŞIN POMPANIN DONMA TEHLİKESİNE KARŞI TESİSATTAKİ SUYU BOŞALTIR.</div>
+            </div>
+            <div class="info-item" data-num="5">
+              <div class="info-num">5</div>
+              <div class="info-text">MONİTÖRDEN SU İŞLEMEK İÇİN AÇILAN MONİTÖR VANASI.</div>
+            </div>
+            <div class="info-item" data-num="6">
+              <div class="info-num">6</div>
+              <div class="info-text">SU TANKINDAKİ SUYU BOŞALTIR.</div>
+            </div>
+            <div class="info-item" data-num="7">
+              <div class="info-num">7</div>
+              <div class="info-text">AYDINLATMAYI AÇAR.</div>
+            </div>
+            <div class="info-item" data-num="8">
+              <div class="info-num">8</div>
+              <div class="info-text">ANA VANA: Start tuşuna bastığınız zaman emiş vanası ve ana vana arasında otomatik seçim yapar. Su işleneceği zaman basılmasına gerek yoktur sistem otomatik açıyor.</div>
+            </div>
+            <div class="info-item" data-num="9">
+              <div class="info-num">9</div>
+              <div class="info-text">EMİŞ VANASI: Start tuşuna bastığınız zaman emiş vanası ve ana vana arasında otomatik seçim yapar. Emiş haricinde açmanıza gerek yoktur.</div>
+            </div>
+            <div class="info-item" data-num="10">
+              <div class="info-num">10</div>
+              <div class="info-text">BASINÇ AYARLAMA GAZ (-) - (+) DÜĞMESİ: Pompa devrini ve aynı zamanda suyun basıncını arttırmak için, Düğmeyi sağa çevirirseniz gaz (+) sola çevirirseniz gaz (-) devreye girer.</div>
+            </div>
+            <div class="info-item" data-num="11">
+              <div class="info-num">11</div>
+              <div class="info-text">Emiş esnasında bu düğme açılırsa pompa emdiği suyu tanka doldurur (Açılmazsa emdiği suyu yangına işler), Diğer bir işlevi ise uzun süre pompadan su işlenmediği zaman pompa ısınmaya başlayacaktır. Bu ısınmanın önüne geçmek için bu tuş açıldığı zaman pompa basınçlandırdığı suyu tekrar su tankına doldurarak sürekli olarak bir devridaim yaparak kendisini soğutur.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
+    <div id="su" class="content">
+      <div class="content-card">
+        <img src="https://i.imgur.com/bbbzAL6.jpeg" alt="Su İşleme">
+      </div>
+    </div>
 
-  <section id="su" class="tab-content">
-    <img src="https://i.imgur.com/bbbzAL6.jpeg" alt="Su İşleme">
-  </section>
+    <div id="kopuk" class="content">
+      <div class="content-card">
+        <img src="https://i.imgur.com/X1FSExk.jpeg" alt="Köpük İşleme">
+      </div>
+    </div>
 
-  <section id="kopuk" class="tab-content">
-    <img src="https://i.imgur.com/X1FSExk.jpeg" alt="Köpük İşleme">
-  </section>
+    <div id="cikrik" class="content">
+      <div class="content-card">
+        <img src="https://i.imgur.com/lOTXjUn.jpeg" alt="Çıkrık">
+      </div>
+    </div>
+  </div>
 
-  <section id="cikrik" class="tab-content">
-    <img src="https://i.imgur.com/lOTXjUn.jpeg" alt="Çıkrık Kullanımı">
-  </section>
-
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>📞 İletişim</h3>
+        <p>Ankara Büyükşehir Belediyesi<br>İtfaiye Dairesi Başkanlığı<br>Acil: 112</p>
+      </div>
+      <div class="footer-section">
+        <h3>🚒 Araç Bilgisi</h3>
+        <p>Rosenbauer 12 Ton Mercedes<br>Su Kapasitesi: 11.000 Litre<br>Köpük Kapasitesi: 1.000 Litre</p>
+      </div>
+      <div class="footer-section">
+        <h3>⚠️ Önemli Not</h3>
+        <p>Bu kullanım kılavuzu sadece<br>bilgi amaçlıdır. Araç kullanımında<br>resmi eğitim şarttır.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Ankara Büyükşehir Belediyesi İtfaiye Dairesi Başkanlığı - Tüm Hakları Saklıdır
+    </div>
+  </footer>
 
   <script>
-    const buttons = document.querySelectorAll('.tab-button');
-    const tabs = document.querySelectorAll('.tab-content');
+    // Tab switching
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.content');
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        buttons.forEach(btn => btn.classList.remove('active'));
-        tabs.forEach(tab => tab.classList.remove('active'));
-
-        button.classList.add('active');
-        document.getElementById(button.dataset.tab).classList.add('active');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        
+        tabBtns.forEach(b => b.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        
+        btn.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
 
-    // Marker tıklama ve tooltip yönetimi
+    // Marker interaction
     const markers = document.querySelectorAll('.marker');
+    const infoItems = document.querySelectorAll('.info-item');
     const tooltips = document.querySelectorAll('.tooltip');
     let activeMarker = null;
     let activeTooltip = null;
 
-    markers.forEach((marker, index) => {
+    markers.forEach((marker) => {
       marker.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         
-        const tooltip = document.getElementById(`tooltip-${index + 1}`);
+        const num = marker.dataset.num;
+        const tooltip = document.getElementById(`tooltip-${num}`);
         
         // Eğer başka bir marker aktifse, onu kapat
         if (activeMarker && activeMarker !== marker) {
           activeMarker.classList.remove('active');
-          activeTooltip.classList.remove('active');
+          if (activeTooltip) activeTooltip.classList.remove('active');
         }
         
         // Tıklanan marker'ı aktif/pasif yap
@@ -572,6 +910,9 @@
           activeMarker = null;
           activeTooltip = null;
         } else {
+          markers.forEach(m => m.classList.remove('active'));
+          tooltips.forEach(t => t.classList.remove('active'));
+          
           marker.classList.add('active');
           tooltip.classList.add('active');
           activeMarker = marker;
@@ -588,24 +929,19 @@
       const markerRect = marker.getBoundingClientRect();
       const wrapperRect = marker.parentElement.getBoundingClientRect();
       
-      // Marker'ın wrapper içindeki pozisyonu
       const markerLeft = markerRect.left - wrapperRect.left;
       const markerTop = markerRect.top - wrapperRect.top;
       
-      // Tooltip'i marker'ın altına yerleştir
       tooltip.style.left = markerLeft + (markerRect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
       tooltip.style.top = markerTop + markerRect.height + 10 + 'px';
       
-      // Ekran sınırlarını kontrol et
       const tooltipRect = tooltip.getBoundingClientRect();
       
-      // Sağ taraftan taşıyorsa
       if (tooltipRect.right > window.innerWidth - 10) {
         tooltip.style.left = 'auto';
         tooltip.style.right = '10px';
       }
       
-      // Sol taraftan taşıyorsa
       if (tooltipRect.left < 10) {
         tooltip.style.left = '10px';
       }
@@ -613,9 +949,40 @@
 
     // Sayfanın herhangi bir yerine tıklandığında tooltip'i kapat
     document.addEventListener('click', (e) => {
-      if (activeMarker && !e.target.classList.contains('marker')) {
-        activeMarker.classList.remove('active');
-        activeTooltip.classList.remove('active');
+      if (!e.target.classList.contains('marker') && !e.target.classList.contains('tooltip')) {
+        markers.forEach(m => m.classList.remove('active'));
+        tooltips.forEach(t => t.classList.remove('active'));
+        activeMarker = null;
+        activeTooltip = null;
+      }
+    });
+
+    infoItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const num = item.dataset.num;
+        
+        // Tooltip'leri kapat
+        markers.forEach(m => m.classList.remove('active'));
+        infoItems.forEach(i => i.classList.remove('active'));
+        tooltips.forEach(t => t.classList.remove('active'));
+        activeMarker = null;
+        activeTooltip = null;
+        
+        // Sadece tıklanan item'ı aktif yap
+        item.classList.add('active');
+        const marker = document.querySelector(`.marker[data-num="${num}"]`);
+        if (marker) {
+          marker.classList.add('active');
+        }
+      });
+    });
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        markers.forEach(m => m.classList.remove('active'));
+        infoItems.forEach(i => i.classList.remove('active'));
+        tooltips.forEach(t => t.classList.remove('active'));
         activeMarker = null;
         activeTooltip = null;
       }
