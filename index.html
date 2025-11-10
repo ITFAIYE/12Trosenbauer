@@ -1,8 +1,10 @@
-<html lang="tr"><head>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>ROSENBAUER 12 TON MERCEDES KULLANIM KILAVUZU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #e63946;
@@ -316,27 +318,25 @@
 
     .tooltip {
       position: absolute;
-      background: rgba(0, 0, 0, 0.95);
-      color: #fff;
-      padding: 12px 16px;
-      border-radius: 8px;
-      font-size: 0.85rem;
+      background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 0.9rem;
       opacity: 0;
       visibility: hidden;
-      width: 250px;
-      max-width: calc(100vw - 40px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-      transition: opacity 0.3s, visibility 0.3s;
-      z-index: 1000;
-      pointer-events: none;
       white-space: normal;
-      word-wrap: break-word;
-      line-height: 1.5;
+      width: 280px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      z-index: 100;
+      pointer-events: none;
     }
 
     .tooltip.active {
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;
     }
 
     .tooltip::before {
@@ -347,7 +347,7 @@
       transform: translateX(-50%);
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-bottom: 8px solid rgba(0, 0, 0, 0.95);
+      border-bottom: 8px solid #1a202c;
     }
 
     footer {
@@ -429,8 +429,10 @@
       }
 
       .tooltip {
-        font-size: 0.8rem;
-        padding: 10px 14px;
+        width: 90vw;
+        max-width: 320px;
+        left: 50% !important;
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -563,47 +565,47 @@
           
           <div class="marker" style="top: 0%;left: 64%;" data-num="1">1</div>
           <div class="line line-vertical" style="top: 2%;left: calc(64% - 2px);height: 6%;"></div>
-          <div class="tooltip" id="tooltip-1">POMPAYI ÇALIŞTIRIR.</div>
+          <div class="tooltip" id="tooltip-pompa-1">POMPAYI ÇALIŞTIRIR.</div>
 
           <div class="marker" style="top: 0%;left: 83%;" data-num="2">2</div>
           <div class="line line-vertical" style="top: 2%;left: calc(83% - 2px);height: 6%;"></div>
-          <div class="tooltip" id="tooltip-2">POMPAYI DURDURUR.</div>
+          <div class="tooltip" id="tooltip-pompa-2">POMPAYI DURDURUR.</div>
 
           <div class="marker" style="top: 26%;left: 47%;" data-num="3">3</div>
           <div class="line line-horizontal" style="top: calc(26% - 2px);left: 39%;width: 6%;"></div>
-          <div class="tooltip" id="tooltip-3">DİJİTAL EKRAN.</div>
+          <div class="tooltip" id="tooltip-pompa-3">DİJİTAL EKRAN.</div>
 
           <div class="marker" style="top: 58%;left: 38%;" data-num="4">4</div>
           <div class="line line-horizontal" style="top: calc(58% - 1px);left: 40%;width: 4%;"></div>
-          <div class="tooltip" id="tooltip-4">TESİSATTAKİ SUYU BOŞALTIR.</div>
+          <div class="tooltip" id="tooltip-pompa-4">TESİSATTAKİ SUYU BOŞALTIR.</div>
 
           <div class="marker" style="top: 58.3%;left: 81%;" data-num="5">5</div>
           <div class="line line-horizontal" style="top: calc(58.3% - 2px);left: 74%;width: 5%;"></div>
-          <div class="tooltip" id="tooltip-5">MONİTÖR VANASI.</div>
+          <div class="tooltip" id="tooltip-pompa-5">MONİTÖR VANASI.</div>
 
           <div class="marker" style="top: 72.8%;left: 56%;" data-num="6">6</div>
           <div class="line line-horizontal" style="top: calc(72.9% - 2px);left: 58.7%;width: 3%;"></div>
-          <div class="tooltip" id="tooltip-6" style="left: 392px; top: 552.237px; transform: translateX(-50%);">SU TANKINDAKİ SUYU BOŞALTIR.</div>
+          <div class="tooltip" id="tooltip-pompa-6">SU TANKINDAKİ SUYU BOŞALTIR.</div>
 
           <div class="marker" style="top: 87%;left: 56%;" data-num="7">7</div>
           <div class="line line-horizontal" style="top: calc(87% - 2px);left: 57.8%;width: 4%;"></div>
-          <div class="tooltip" id="tooltip-7">AYDINLATMAYI AÇAR.</div>
+          <div class="tooltip" id="tooltip-pompa-7">AYDINLATMAYI AÇAR.</div>
 
           <div class="marker" style="top: 59%;left: 1%;" data-num="8">8</div>
           <div class="line line-horizontal" style="top: calc(59% - 2px);left: 3%;width: 5%;"></div>
-          <div class="tooltip" id="tooltip-8">ANA VANA.</div>
+          <div class="tooltip" id="tooltip-pompa-8">ANA VANA.</div>
 
           <div class="marker" style="top: 73%;left: 1%;" data-num="9">9</div>
           <div class="line line-horizontal" style="top: calc(73% - 2px);left: 3%;width: 5%;"></div>
-          <div class="tooltip" id="tooltip-9">EMİŞ VANASI.</div>
+          <div class="tooltip" id="tooltip-pompa-9">EMİŞ VANASI.</div>
 
           <div class="marker" style="top: 32%;left: 94%;" data-num="10">10</div>
           <div class="line line-horizontal" style="top: calc(32% - 3px);left: 85%;width: 10%;"></div>
-          <div class="tooltip" id="tooltip-10">BASINÇ AYARLAMA GAZ (-) - (+).</div>
+          <div class="tooltip" id="tooltip-pompa-10">BASINÇ AYARLAMA GAZ (-) - (+).</div>
 
           <div class="marker" style="top: 73%;left: 98%;" data-num="11">11</div>
           <div class="line line-horizontal" style="top: calc(73% - 3px);left: 91.7%;width: 4%;"></div>
-          <div class="tooltip" id="tooltip-11">TANK DOLUM.</div>
+          <div class="tooltip" id="tooltip-pompa-11">TANK DOLUM.</div>
         </div>
 
         <div class="info-panel">
@@ -709,44 +711,49 @@
         contents.forEach(c => c.classList.remove('active'));
         btn.classList.add('active');
         document.getElementById(tab).classList.add('active');
+        
+        // Tooltip'leri temizle
+        document.querySelectorAll('.marker').forEach(m => m.classList.remove('active'));
+        document.querySelectorAll('.tooltip').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.info-item').forEach(i => i.classList.remove('active'));
+        
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
 
-    // Marker and tooltip functionality
+    // Tooltip functionality - Magirus stilinde
     const markers = document.querySelectorAll('.marker');
     const tooltips = document.querySelectorAll('.tooltip');
     const infoItems = document.querySelectorAll('.info-item');
+    
+    let activeMarker = null;
+    let activeTooltip = null;
 
     function positionTooltip(marker, tooltip) {
       const markerRect = marker.getBoundingClientRect();
       const wrapper = marker.closest('.panel-wrapper');
+      if (!wrapper) return;
+      
       const wrapperRect = wrapper.getBoundingClientRect();
       
-      // Calculate marker position within wrapper
-      const markerCenterX = markerRect.left - wrapperRect.left + (markerRect.width / 2);
-      const markerBottomY = markerRect.bottom - wrapperRect.top + 10;
+      const markerLeft = markerRect.left - wrapperRect.left;
+      const markerTop = markerRect.top - wrapperRect.top;
       
-      // Position tooltip
-      tooltip.style.left = markerCenterX + 'px';
-      tooltip.style.top = markerBottomY + 'px';
-      tooltip.style.transform = 'translateX(-50%)';
+      // Tooltip'i marker'ın altına yerleştir
+      tooltip.style.left = markerLeft + (markerRect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+      tooltip.style.top = markerTop + markerRect.height + 15 + 'px';
       
-      // Check for overflow and adjust
+      // Tooltip ekran dışına taşıyorsa düzelt
       setTimeout(() => {
         const tooltipRect = tooltip.getBoundingClientRect();
-        const viewportWidth = window.innerWidth;
         
-        // Left overflow
-        if (tooltipRect.left < 15) {
-          const offset = 15 - tooltipRect.left;
-          tooltip.style.left = (markerCenterX + offset) + 'px';
+        if (tooltipRect.right > window.innerWidth - 10) {
+          tooltip.style.left = 'auto';
+          tooltip.style.right = '10px';
         }
         
-        // Right overflow
-        if (tooltipRect.right > viewportWidth - 15) {
-          const offset = tooltipRect.right - viewportWidth + 15;
-          tooltip.style.left = (markerCenterX - offset) + 'px';
+        if (tooltipRect.left < 10) {
+          tooltip.style.left = '10px';
         }
       }, 10);
     }
@@ -754,25 +761,46 @@
     markers.forEach(marker => {
       marker.addEventListener('click', (e) => {
         e.stopPropagation();
-        const num = marker.dataset.num;
-        const isPanel = marker.closest('#panel') !== null;
-        const tooltipId = isPanel ? `tooltip-panel-${num}` : `tooltip-${num}`;
+        
+        const activeSection = document.querySelector('.content.active');
+        if (!activeSection) return;
+        
+        const sectionId = activeSection.id;
+        const markerNumber = marker.dataset.num;
+        const tooltipId = `tooltip-${sectionId}-${markerNumber}`;
         const tooltip = document.getElementById(tooltipId);
         
-        const isActive = marker.classList.contains('active');
+        if (!tooltip) {
+          console.warn('Tooltip bulunamadı:', tooltipId);
+          return;
+        }
         
-        // Clear all active states
-        markers.forEach(m => m.classList.remove('active'));
-        tooltips.forEach(t => t.classList.remove('active'));
+        // Eğer başka bir marker aktifse, onu kapat
+        if (activeMarker && activeMarker !== marker) {
+          activeMarker.classList.remove('active');
+          if (activeTooltip) {
+            activeTooltip.classList.remove('active');
+          }
+        }
+        
+        // Tüm info item'ları temizle
         infoItems.forEach(i => i.classList.remove('active'));
         
-        if (!isActive && tooltip) {
+        // Toggle current marker
+        if (marker.classList.contains('active')) {
+          marker.classList.remove('active');
+          tooltip.classList.remove('active');
+          activeMarker = null;
+          activeTooltip = null;
+        } else {
           marker.classList.add('active');
           tooltip.classList.add('active');
+          activeMarker = marker;
+          activeTooltip = tooltip;
           positionTooltip(marker, tooltip);
           
-          // Activate corresponding info item
-          const infoItem = document.querySelector(`.info-item[data-num="${num}"]`);
+          // İlgili info item'ı aktif et (scroll olmadan)
+          const infoItem = document.querySelector(`.info-item[data-num="${markerNumber}"]`);
           if (infoItem) {
             infoItem.classList.add('active');
           }
@@ -780,52 +808,54 @@
       });
     });
 
+    // Info item click
     infoItems.forEach(item => {
       item.addEventListener('click', () => {
         const num = item.dataset.num;
         
-        // Clear all active states
+        // Tüm aktif durumları temizle
         markers.forEach(m => m.classList.remove('active'));
         tooltips.forEach(t => t.classList.remove('active'));
         infoItems.forEach(i => i.classList.remove('active'));
         
         item.classList.add('active');
         
-        // Find and activate corresponding marker
-        const marker = Array.from(markers).find(m => {
-          const isPanel = m.closest('#panel') !== null;
-          const isPompa = m.closest('#pompa') !== null;
-          const currentContent = document.querySelector('.content.active');
-          const currentIsPanel = currentContent && currentContent.id === 'panel';
-          const currentIsPompa = currentContent && currentContent.id === 'pompa';
+        // İlgili marker'ı aktif et
+        const activeSection = document.querySelector('.content.active');
+        if (activeSection) {
+          const sectionId = activeSection.id;
+          const marker = document.querySelector(`.marker[data-num="${num}"]`);
+          const tooltip = document.getElementById(`tooltip-${sectionId}-${num}`);
           
-          return m.dataset.num === num && 
-                 ((isPanel && currentIsPanel) || (isPompa && currentIsPompa));
-        });
-        
-        if (marker) {
-          marker.classList.add('active');
-          // Scroll to marker (no scroll on mobile to prevent unwanted movement)
+          if (marker && tooltip) {
+            marker.classList.add('active');
+            tooltip.classList.add('active');
+            activeMarker = marker;
+            activeTooltip = tooltip;
+            positionTooltip(marker, tooltip);
+          }
         }
       });
     });
 
-    // Close tooltips on outside click
+    // Sayfanın herhangi bir yerine tıklandığında tooltip'i kapat
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.marker') && !e.target.closest('.info-item')) {
-        markers.forEach(m => m.classList.remove('active'));
-        tooltips.forEach(t => t.classList.remove('active'));
+      if (activeMarker && !e.target.classList.contains('marker') && !e.target.classList.contains('info-item') && !e.target.closest('.info-item')) {
+        activeMarker.classList.remove('active');
+        if (activeTooltip) {
+          activeTooltip.classList.remove('active');
+        }
         infoItems.forEach(i => i.classList.remove('active'));
+        activeMarker = null;
+        activeTooltip = null;
       }
     });
 
-    // Update tooltip position on resize
+    // Pencere boyutu değiştiğinde tooltip pozisyonlarını güncelle
     let resizeTimeout;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        const activeMarker = document.querySelector('.marker.active');
-        const activeTooltip = document.querySelector('.tooltip.active');
         if (activeMarker && activeTooltip) {
           positionTooltip(activeMarker, activeTooltip);
         }
@@ -833,6 +863,5 @@
     });
   </script>
 
-
-
-</body></html>
+</body>
+</html>
