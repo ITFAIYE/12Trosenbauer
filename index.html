@@ -1,8 +1,10 @@
-<html lang="tr"><head>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>ROSENBAUER 12 TON MERCEDES KULLANIM KILAVUZU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #e63946;
@@ -108,13 +110,6 @@
       flex-wrap: wrap;
       gap: 0;
       padding: 0 24px;
-      overflow-x: visible;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .tabs-inner::-webkit-scrollbar {
-      display: none;
     }
 
     .tab-btn {
@@ -168,7 +163,8 @@
 
     .content-card img {
       width: 100%;
-      height: 600px;
+      height: auto;
+      max-height: 600px;
       object-fit: contain;
       display: block;
       border-radius: 12px;
@@ -188,13 +184,11 @@
       width: 100%;
       margin: 0 auto;
       border-radius: 12px;
-      overflow: visible;
     }
 
     .panel-wrapper img {
       width: 100%;
-      height: 600px;
-      object-fit: contain;
+      height: auto;
       display: block;
       border-radius: 12px;
     }
@@ -204,6 +198,7 @@
       background: var(--accent);
       box-shadow: 0 2px 8px rgba(230, 57, 70, 0.3);
       z-index: 5;
+      pointer-events: none;
     }
 
     .line-vertical {
@@ -323,7 +318,7 @@
 
     .tooltip {
       position: absolute;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.95);
       color: #fff;
       padding: 12px 16px;
       border-radius: 8px;
@@ -331,11 +326,14 @@
       opacity: 0;
       visibility: hidden;
       width: 250px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: all 0.3s;
+      max-width: calc(100vw - 40px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      transition: opacity 0.3s, visibility 0.3s;
       z-index: 1000;
       pointer-events: none;
       white-space: normal;
+      word-wrap: break-word;
+      line-height: 1.5;
     }
 
     .tooltip.active {
@@ -351,7 +349,7 @@
       transform: translateX(-50%);
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-bottom: 8px solid rgba(0, 0, 0, 0.9);
+      border-bottom: 8px solid rgba(0, 0, 0, 0.95);
     }
 
     footer {
@@ -420,9 +418,21 @@
         font-size: 0.9rem;
       }
 
+      .content-card img {
+        max-height: 400px;
+      }
+
+      .panel-section {
+        padding: 20px;
+      }
+
+      .info-panel {
+        padding: 20px;
+      }
+
       .tooltip {
-        width: 90vw;
-        max-width: 300px;
+        font-size: 0.8rem;
+        padding: 10px 14px;
       }
     }
   </style>
@@ -469,47 +479,39 @@
           
           <div class="marker" style="top: 14%;left: 22.4%;" data-num="1">1</div>
           <div class="line line-vertical" style="top: 17%;left: calc(22.5% - 2px);height: 9%;"></div>
-          <div class="tooltip" id="tooltip-panel-1" style="left: 156.8px; top: 114.508px; transform: translateX(-50%);">ZİNCİR SERME SİSTEMİ AKTİF LAMBASI.</div>
+          <div class="tooltip" id="tooltip-panel-1">ZİNCİR SERME SİSTEMİ AKTİF LAMBASI.</div>
 
           <div class="marker" style="top: 14%;left: 43.8%;" data-num="2">2</div>
           <div class="line line-vertical" style="top: 17%;left: calc(43.8% - 2px);height: 13%;"></div>
-          <div class="tooltip" id="tooltip-panel-2" style="left: 306.6px; top: 114.61px; transform: translateX(-50%);">ARAÇ DIŞINDAKİ PROJEKTÖRÜ AÇMA – KAPATMA.
-</div>
+          <div class="tooltip" id="tooltip-panel-2">ARAÇ DIŞINDAKİ PROJEKTÖRÜ AÇMA – KAPATMA.</div>
 
           <div class="marker" style="top: 14%;left: 60.8%;" data-num="3">3</div>
           <div class="line line-vertical" style="top: 17%;left: calc(60.8% - 2px);height: 12%;"></div>
-          <div class="tooltip" id="tooltip-panel-3" style="left: 425.6px; top: 114.7px; transform: translateX(-50%);">IŞIK KULESİ AÇIK İKAZ LAMBASI.
-</div>
+          <div class="tooltip" id="tooltip-panel-3">IŞIK KULESİ AÇIK İKAZ LAMBASI.</div>
 
           <div class="marker" style="top: 14%;left: 77.8%;" data-num="4">4</div>
           <div class="line line-vertical" style="top: 17%;left: calc(77.8% - 2px);height: 13%;"></div>
-          <div class="tooltip" id="tooltip-panel-4" style="left: 544.6px; top: 114.7px; transform: translateX(-50%);">ARAÇ DIŞI ÇEVRE AYDINLATMA AÇMA – KAPATMA.</div>
+          <div class="tooltip" id="tooltip-panel-4">ARAÇ DIŞI ÇEVRE AYDINLATMA AÇMA – KAPATMA.</div>
 
           <div class="marker" style="top: 49%;left: 96%;" data-num="5">5</div>
           <div class="line line-horizontal" style="top: calc(49% - 2px);left: 66%;width: 29%;"></div>
-          <div class="tooltip" id="tooltip-panel-5" style="left: 672px; top: 324.7px; transform: translateX(-50%);">SİSTEM TUŞU AÇMA – KAPATMA.</div>
+          <div class="tooltip" id="tooltip-panel-5">SİSTEM TUŞU AÇMA – KAPATMA.</div>
 
           <div class="marker" style="top: 49%;left: 1%;" data-num="6">6</div>
           <div class="line line-horizontal" style="top: calc(49% - 2px);left: 3.5%;width: 10%;"></div>
-          <div class="tooltip" id="tooltip-panel-6" style="left: 7px; top: 324.597px; transform: translateX(-50%);">ZİNCİR SERME SİSTEMİ AÇMA - KAPATMA .</div>
+          <div class="tooltip" id="tooltip-panel-6">ZİNCİR SERME SİSTEMİ AÇMA - KAPATMA.</div>
 
           <div class="marker" style="top: 82%;left: 43%;" data-num="7">7</div>
           <div class="line line-vertical" style="top: 68%;left: calc(43% - 2px);height: 12%;"></div>
-          <div class="tooltip" id="tooltip-panel-7" style="left: 301px; top: 522.696px; transform: translateX(-50%);">SİSLEME AÇMA - KAPATMA .
-
-</div>
+          <div class="tooltip" id="tooltip-panel-7">SİSLEME AÇMA - KAPATMA.</div>
 
           <div class="marker" style="top: 82%;left: 60.4%;" data-num="8">8</div>
           <div class="line line-vertical" style="top: 71%;left: calc(60.5% - 2px);height: 9%;"></div>
-          <div class="tooltip" id="tooltip-panel-8" style="left: 422.8px; top: 522.7px; transform: translateX(-50%);">DOLAP KAPAĞI (PANJUR) AÇIK İKAZI LAMBASI.
-
-</div>
+          <div class="tooltip" id="tooltip-panel-8">DOLAP KAPAĞI (PANJUR) AÇIK İKAZI LAMBASI.</div>
 
           <div class="marker" style="top: 82%;left: 78%;" data-num="9">9</div>
           <div class="line line-vertical" style="top: 68%;left: calc(78% - 2px);height: 12%;"></div>
-          <div class="tooltip" id="tooltip-panel-9" style="left: 546px; top: 522.635px; transform: translateX(-50%);">PANJUR İÇİ AYDINLATMA AÇMA – KAPATMA.
-
-</div>
+          <div class="tooltip" id="tooltip-panel-9">PANJUR İÇİ AYDINLATMA AÇMA – KAPATMA.</div>
         </div>
 
         <div class="info-panel">
@@ -525,10 +527,7 @@
             </div>
             <div class="info-item" data-num="3">
               <div class="info-num">3</div>
-              <div class="info-text">ARAÇ DIŞINDA BULUNAN IŞIK KULESİ AÇIK KONUMDA OLURSA YADA 
-KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
-
-</div>
+              <div class="info-text">ARAÇ DIŞINDA BULUNAN IŞIK KULESİ AÇIK KONUMDA OLURSA YADA KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.</div>
             </div>
             <div class="info-item" data-num="4">
               <div class="info-num">4</div>
@@ -536,31 +535,23 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
             </div>
             <div class="info-item" data-num="5">
               <div class="info-num">5</div>
-              <div class="info-text">SU POMPASINA GİDEN ELEKTRİĞİ KONTROL EDER EĞER TUŞ KAPALI OLURSA POMPA ÜZERİNDEKİ HİÇBİR FONKSİYON ÇALIŞMAZ.
-
-</div>
+              <div class="info-text">SU POMPASINA GİDEN ELEKTRİĞİ KONTROL EDER EĞER TUŞ KAPALI OLURSA POMPA ÜZERİNDEKİ HİÇBİR FONKSİYON ÇALIŞMAZ.</div>
             </div>
             <div class="info-item" data-num="6">
               <div class="info-num">6</div>
-              <div class="info-text">KIŞIN KAR YADA DON TEHLİKESİ OLDUĞU ZAMAN LASTİKLERİN KAYMASINI ENGELLEMEK İÇİN HAREKET HALİNDEYKEN LASTİĞİN ALTINA OTOMATİK ZİNCİR SEREN SİSTEMDİR NOT: BU SİSTEM HAREKET HALİNDEYKEN KULLANILMALI ARAÇ HAREKET ETMİYORKEN BU SİSTEM DEVREYE ALINMAMALI YADA DEVREDEN ÇIKARILMAMALIDIR. BU SİSTEM AKTİFKEN YÜKSEK HIZLARA ÇIKMAYINIZ ! </div>
+              <div class="info-text">KIŞIN KAR YADA DON TEHLİKESİ OLDUĞU ZAMAN LASTİKLERİN KAYMASINI ENGELLEMEK İÇİN HAREKET HALİNDEYKEN LASTİĞİN ALTINA OTOMATİK ZİNCİR SEREN SİSTEMDİR. NOT: BU SİSTEM HAREKET HALİNDEYKEN KULLANILMALI, ARAÇ HAREKET ETMİYORKEN BU SİSTEM DEVREYE ALINMAMALI YADA DEVREDEN ÇIKARILMAMALIDIR. BU SİSTEM AKTİFKEN YÜKSEK HIZLARA ÇIKMAYINIZ!</div>
             </div>
             <div class="info-item" data-num="7">
               <div class="info-num">7</div>
-              <div class="info-text">ARAÇ LASTİĞİ ÜZERİNDE BULUNAN NOZULLARI AÇARAK LASTİĞE SU SIKAR BU SAYEDE YANGINDAN DOLAYI ISINAN LASTİKLER SOĞUTULUR.
-
-</div>
+              <div class="info-text">ARAÇ LASTİĞİ ÜZERİNDE BULUNAN NOZULLARI AÇARAK LASTİĞE SU SIKAR BU SAYEDE YANGINDAN DOLAYI ISINAN LASTİKLER SOĞUTULUR.</div>
             </div>
             <div class="info-item" data-num="8">
               <div class="info-num">8</div>
-              <div class="info-text">PANJURLARDAN HERHANGİ BİRİ AÇIK KALIRSA VEYA TAM KAPANMAZSA YEŞİL IŞIK YANAR. 9 NUMARALI BUTON AKTİF OLMAZSA LAMBA UYARI VERMEZ.
-
-</div>
+              <div class="info-text">PANJURLARDAN HERHANGİ BİRİ AÇIK KALIRSA VEYA TAM KAPANMAZSA YEŞİL IŞIK YANAR. 9 NUMARALI BUTON AKTİF OLMAZSA LAMBA UYARI VERMEZ.</div>
             </div>
             <div class="info-item" data-num="9">
               <div class="info-num">9</div>
-              <div class="info-text">DOLAP İÇİ AYDINLATMALARI YAKAR.
-
-</div>
+              <div class="info-text">DOLAP İÇİ AYDINLATMALARI YAKAR.</div>
             </div>
           </div>
         </div>
@@ -574,11 +565,11 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
           
           <div class="marker" style="top: -1%;left: 62%;" data-num="1">1</div>
           <div class="line line-vertical" style="top: 2%;left: calc(62% - 2px);height: 6%;"></div>
-          <div class="tooltip" id="tooltip-1" style="left: 434px; top: 24.6856px; transform: translateX(-50%);">POMPAYI ÇALIŞTIRIR.</div>
+          <div class="tooltip" id="tooltip-1">POMPAYI ÇALIŞTIRIR.</div>
 
           <div class="marker" style="top: -1%;left: 78%;" data-num="2">2</div>
           <div class="line line-vertical" style="top: 2%;left: calc(78% - 2px);height: 6%;"></div>
-          <div class="tooltip" id="tooltip-2" style="left: 546px; top: 24.6554px; transform: translateX(-50%);">POMPAYI DURDURUR.</div>
+          <div class="tooltip" id="tooltip-2">POMPAYI DURDURUR.</div>
 
           <div class="marker" style="top: 26%;left: 47%;" data-num="3">3</div>
           <div class="line line-horizontal" style="top: calc(26% - 2px);left: 39%;width: 6%;"></div>
@@ -594,26 +585,26 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
 
           <div class="marker" style="top: 72.8%;left: 56%;" data-num="6">6</div>
           <div class="line line-horizontal" style="top: calc(72.9% - 2px);left: 58%;width: 3%;"></div>
-          <div class="tooltip" id="tooltip-6" style="left: 392px; top: 467.425px; transform: translateX(-50%);">SU TANKINDAKİ SUYU BOŞALTIR.</div>
+          <div class="tooltip" id="tooltip-6">SU TANKINDAKİ SUYU BOŞALTIR.</div>
 
           <div class="marker" style="top: 87%;left: 54%;" data-num="7">7</div>
           <div class="line line-horizontal" style="top: calc(87% - 2px);left: 55.8%;width: 4%;"></div>
-          <div class="tooltip" id="tooltip-7" style="left: 378px; top: 552.628px; transform: translateX(-50%);">AYDINLATMAYI AÇAR.</div>
+          <div class="tooltip" id="tooltip-7">AYDINLATMAYI AÇAR.</div>
 
           <div class="marker" style="top: 59%;left: 9%;" data-num="8">8</div>
           <div class="line line-horizontal" style="top: calc(59% - 2px);left: 10%;width: 5%;"></div>
-          <div class="tooltip" id="tooltip-8" style="left: 63px; top: 384.661px; transform: translateX(-50%);">ANA VANA.</div>
+          <div class="tooltip" id="tooltip-8">ANA VANA.</div>
 
           <div class="marker" style="top: 73%;left: 9%;" data-num="9">9</div>
           <div class="line line-horizontal" style="top: calc(73% - 2px);left: 10%;width: 5%;"></div>
           <div class="tooltip" id="tooltip-9">EMİŞ VANASI.</div>
 
           <div class="marker" style="top: 32%;left: 88%;" data-num="10">10</div>
-          <div class="line line-horizontal" style="top: calc(32% - 3px);left: 79%;width: 10%;height: 4px;"></div>
+          <div class="line line-horizontal" style="top: calc(32% - 3px);left: 79%;width: 10%;"></div>
           <div class="tooltip" id="tooltip-10">BASINÇ AYARLAMA GAZ (-) - (+).</div>
 
           <div class="marker" style="top: 73%;left: 91%;" data-num="11">11</div>
-          <div class="line line-horizontal" style="top: calc(73% - 3px);left: 85%;width: 4%;height: 4px;"></div>
+          <div class="line line-horizontal" style="top: calc(73% - 3px);left: 85%;width: 4%;"></div>
           <div class="tooltip" id="tooltip-11">TANK DOLUM.</div>
         </div>
 
@@ -709,6 +700,7 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
   </footer>
 
   <script>
+    // Tab switching
     const tabBtns = document.querySelectorAll('.tab-btn');
     const contents = document.querySelectorAll('.content');
 
@@ -723,19 +715,55 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
       });
     });
 
+    // Marker and tooltip functionality
     const markers = document.querySelectorAll('.marker');
     const tooltips = document.querySelectorAll('.tooltip');
     const infoItems = document.querySelectorAll('.info-item');
+
+    function positionTooltip(marker, tooltip) {
+      const markerRect = marker.getBoundingClientRect();
+      const wrapper = marker.closest('.panel-wrapper');
+      const wrapperRect = wrapper.getBoundingClientRect();
+      
+      // Calculate marker position within wrapper
+      const markerCenterX = markerRect.left - wrapperRect.left + (markerRect.width / 2);
+      const markerBottomY = markerRect.bottom - wrapperRect.top + 10;
+      
+      // Position tooltip
+      tooltip.style.left = markerCenterX + 'px';
+      tooltip.style.top = markerBottomY + 'px';
+      tooltip.style.transform = 'translateX(-50%)';
+      
+      // Check for overflow and adjust
+      setTimeout(() => {
+        const tooltipRect = tooltip.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        
+        // Left overflow
+        if (tooltipRect.left < 15) {
+          const offset = 15 - tooltipRect.left;
+          tooltip.style.left = (markerCenterX + offset) + 'px';
+        }
+        
+        // Right overflow
+        if (tooltipRect.right > viewportWidth - 15) {
+          const offset = tooltipRect.right - viewportWidth + 15;
+          tooltip.style.left = (markerCenterX - offset) + 'px';
+        }
+      }, 10);
+    }
 
     markers.forEach(marker => {
       marker.addEventListener('click', (e) => {
         e.stopPropagation();
         const num = marker.dataset.num;
-        const tooltipId = marker.closest('#panel') ? `tooltip-panel-${num}` : `tooltip-${num}`;
+        const isPanel = marker.closest('#panel') !== null;
+        const tooltipId = isPanel ? `tooltip-panel-${num}` : `tooltip-${num}`;
         const tooltip = document.getElementById(tooltipId);
         
         const isActive = marker.classList.contains('active');
         
+        // Clear all active states
         markers.forEach(m => m.classList.remove('active'));
         tooltips.forEach(t => t.classList.remove('active'));
         infoItems.forEach(i => i.classList.remove('active'));
@@ -743,19 +771,13 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
         if (!isActive && tooltip) {
           marker.classList.add('active');
           tooltip.classList.add('active');
+          positionTooltip(marker, tooltip);
           
-          const markerRect = marker.getBoundingClientRect();
-          const wrapperRect = marker.closest('.panel-wrapper').getBoundingClientRect();
-          
-          const left = markerRect.left - wrapperRect.left + (markerRect.width / 2);
-          const top = markerRect.top - wrapperRect.top + markerRect.height + 10;
-          
-          tooltip.style.left = left + 'px';
-          tooltip.style.top = top + 'px';
-          tooltip.style.transform = 'translateX(-50%)';
-          
+          // Activate corresponding info item
           const infoItem = document.querySelector(`.info-item[data-num="${num}"]`);
-          if (infoItem) infoItem.classList.add('active');
+          if (infoItem) {
+            infoItem.classList.add('active');
+          }
         }
       });
     });
@@ -763,16 +785,34 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
     infoItems.forEach(item => {
       item.addEventListener('click', () => {
         const num = item.dataset.num;
+        
+        // Clear all active states
         markers.forEach(m => m.classList.remove('active'));
         tooltips.forEach(t => t.classList.remove('active'));
         infoItems.forEach(i => i.classList.remove('active'));
         
         item.classList.add('active');
-        const marker = document.querySelector(`.marker[data-num="${num}"]`);
-        if (marker) marker.classList.add('active');
+        
+        // Find and activate corresponding marker
+        const marker = Array.from(markers).find(m => {
+          const isPanel = m.closest('#panel') !== null;
+          const isPompa = m.closest('#pompa') !== null;
+          const currentContent = document.querySelector('.content.active');
+          const currentIsPanel = currentContent && currentContent.id === 'panel';
+          const currentIsPompa = currentContent && currentContent.id === 'pompa';
+          
+          return m.dataset.num === num && 
+                 ((isPanel && currentIsPanel) || (isPompa && currentIsPompa));
+        });
+        
+        if (marker) {
+          marker.classList.add('active');
+          // Scroll to marker (no scroll on mobile to prevent unwanted movement)
+        }
       });
     });
 
+    // Close tooltips on outside click
     document.addEventListener('click', (e) => {
       if (!e.target.closest('.marker') && !e.target.closest('.info-item')) {
         markers.forEach(m => m.classList.remove('active'));
@@ -780,7 +820,20 @@ KULE TAM OLARAK KAPANMAMIŞSA KIRMIZI IŞIK YANAR.
         infoItems.forEach(i => i.classList.remove('active'));
       }
     });
+
+    // Update tooltip position on resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const activeMarker = document.querySelector('.marker.active');
+        const activeTooltip = document.querySelector('.tooltip.active');
+        if (activeMarker && activeTooltip) {
+          positionTooltip(activeMarker, activeTooltip);
+        }
+      }, 250);
+    });
   </script>
 
-
-</body></html>
+</body>
+</html>
